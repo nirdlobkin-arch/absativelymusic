@@ -125,7 +125,7 @@ button, audio { font: inherit; }
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+ align-items: flex-end;
   padding: 9rem clamp(1.2rem, 7vw, 7rem) 5rem;
 }
 

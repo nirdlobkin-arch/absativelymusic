@@ -80,8 +80,8 @@ button, audio { font: inherit; }
 }
 
 .brand img {
-  width: clamp(180px, 21vw, 320px);
-  filter: drop-shadow(0 8px 20px rgba(0,0,0,.45));
+  width: clamp(140px, 16vw, 200px);
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,.45));
 }
 
 .nav-links {

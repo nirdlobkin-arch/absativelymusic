@@ -126,7 +126,7 @@ button, audio { font: inherit; }
   min-height: 100vh;
   display: flex;
  align-items: flex-end;
-  padding: 9rem clamp(1.2rem, 7vw, 7rem) 5rem;
+padding: 9rem clamp(1.2rem, 7vw, 7rem) 2rem;
 }
 
 .hero-shade {

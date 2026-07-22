@@ -12,7 +12,10 @@
 
   <header class="site-header" id="home">
     <nav class="nav-wrap" aria-label="Main navigation">
-      
+      <a class="brand" href="#home" aria-label="Absatively Music home">
+        <img src="assets/absatively-logo.png" alt="Absatively Music">
+      </a>
+
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu">
         <span></span><span></span><span></span>
         <span class="sr-only">Open menu</span>
@@ -25,28 +28,25 @@
         <a href="#contact">Contact</a>
       </div>
     </nav>
-<div class="hero">
-  <div class="hero-shade"></div>
-   <div class="hero-content">
 
-    <div class="hero-actions">
-      <a class="button button-primary" href="#selections">
-        Browse Selections
-      </a>
-
-      <button class="button button-ghost" id="themeButton" type="button">
-        <span id="themeIcon">▶</span>
-        <span id="themeLabel">Play Welcome Theme</span>
-      </button>
+    <div class="hero">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Original Music · Inspired Stories · Timeless Instrumentals</p>
+        <h1>Absatively Music</h1>
+        <p class="tagline">through Posilutely Artful Intelligence</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#selections">Browse Selections</a>
+          <button class="button button-ghost" id="themeButton" type="button">
+            <span id="themeIcon">▶</span>
+            <span id="themeLabel">Play Welcome Theme</span>
+          </button>
+        </div>
+        <audio id="themeAudio"controls preload="metadata">
+          <source src="assets/theme.mp3" type="audio/mpeg">
+        </audio>
+      </div>
     </div>
-
-    <audio id="themeAudio" controls preload="metadata">
-      <source src="assets/theme.mp3" type="audio/mpeg">
-      Your browser does not support audio.
-    </audio>
-
-  </div>
-</div>
   </header>
 
   <main id="main">
@@ -96,10 +96,7 @@
             A tender song about seeing beyond appearances and recognizing what matters most.
           </p>
           <p class="credit-line">Words by Judy Manning · Produced by Nik Boldrini</p>
-         <audio controls>
-  <source src="assets/Eyes of the Heart.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+          <span class="coming-soon">Listen now</span>
         </div>
       </article>
     </section>

@@ -125,6 +125,7 @@ button, audio { font: inherit; }
   position: relative;
   min-height: 100vh;
   display: flex;
+   justify-content: center;
  align-items: flex-end;
 
 padding: 9rem clamp(1.2rem, 7vw, 7rem) 2rem;
@@ -140,9 +141,13 @@ background: url("assets/hero.png") center/cover no-repeat;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  width: min(760px, 100%);
+    position: relative;
+    z-index: 2;
+    width: min(760px, 100%);
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(760px, 100%);
 }
 
 .eyebrow {

@@ -125,7 +125,7 @@ button, audio { font: inherit; }
   position: relative;
   min-height: 100vh;
   display: flex;
- align-items: flex-end;
+ align-items: center;
 
 padding: 9rem clamp(1.2rem, 7vw, 7rem) 2rem;
 background: url("assets/hero.png") center/cover no-repeat;

@@ -9,57 +9,122 @@
 </head>
 <body>
 <header class="hero" id="home">
-  <nav class="nav">
-    <a class="brand" href="#home"><img src="assets/absatively-logo.png" alt="Absatively Music"></a>
-    <button class="menu" aria-expanded="false" aria-controls="links">☰</button>
+  <nav class="nav" aria-label="Main navigation">
+    <button class="menu" aria-expanded="false" aria-controls="links" aria-label="Open navigation menu">☰</button>
     <div class="links" id="links">
-      <a href="#home">Home</a><a href="#selections">Browse Selections</a><a href="#about">About</a><a href="#contact">Contact</a>
+      <a href="#home">Home</a>
+<a href="#songs">Songs</a>
+<a href="#instrumentals">Instrumentals</a>
+<a href="#about">About</a>
     </div>
   </nav>
 
   <div class="hero-content">
-    <p class="eyebrow">Music. Imagination. Inspiration.</p>
-   <p class="tagline">through Posilutely Artful Intelligence</p>
-    <p class="<p>">Original songs, memorable instrumentals and creative visuals—made with imagination, experience and purpose.</p>
-    <div class="hero-actions">
-      <a class="button primary" href="#selections">Explore the Music ▶</a>
-      <button class="button secondary" id="themeButton">
-    <span id="themeIcon">▶</span>
-    <span id="themeLabel">Play Welcome Theme</span>
-</button>
-      <audio id="themeAudio" preload="metadata"><source src="assets/theme.mp3" type="audio/mpeg"></audio>
+    <img class="hero-logo" src="assets/absatively-logo.png" alt="Absatively Music">
+    <p class="hero-tagline">through Posilutely Artful Intelligence</p>
+    <p class="intro">Original songs, memorable instrumentals and creative visuals—made with imagination, experience and purpose.</p>
+<div class="hero-player-row">    
+<div class="actions">
+     <!-- Browse button removed for Version 2 -->
+      <button class="button secondary" id="themeButton">▶ Play Welcome Theme</button>
     </div>
+    <audio class="hero-audio" id="themeAudio" preload="metadata">
+      <source src="assets/theme.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const audio = document.getElementById('themeAudio');
+    const button = document.getElementById('themeButton');
+
+    if (!audio || !button) return;
+
+    audio.volume = 0.20;
+
+    button.addEventListener('click', function () {
+
+        if (audio.paused) {
+            audio.play();
+            button.textContent = '⏸ Pause Welcome Theme';
+        } else {
+            audio.pause();
+            button.textContent = '▶ Play Welcome Theme';
+        }
+
+    });
+
+    audio.addEventListener('ended', function () {
+        button.textContent = '▶ Play Welcome Theme';
+    });
+
+});
+</script>
   </div>
 </header>
 
 <main>
   <section class="section" id="selections">
-    <div class="section-title"><p>Featured Release</p><h2>Box Full of Pictures</h2></div>
+
+<h2>Music Catalog</h2>
+<p class="catalog-intro">
+Browse the growing collection of original songs from Absatively Music.
+Each song includes a brief introduction to help you discover music that
+may speak to you.
+</p>
+
+<div class="streaming-links">
+<strong>Available on:</strong>
+<a href="#">Spotify</a> •
+<a href="#">Apple Music</a> •
+<a href="#">Amazon Music</a> •
+<a href="#">YouTube Music</a> •
+<a href="#">Deezer</a> •
+<a href="#">Pandora</a>
+</div>   
+<div class="catalog-grid">
     <article class="feature-card">
       <img src="assets/box-full-of-pictures.png" alt="Box Full of Pictures cover art">
       <div>
-        <p class="label">New Release</p>
+        
         <h3>Box Full of Pictures</h3>
-        <p>A warm journey through photographs, memories, moments and melodies.</p>
-        <p class="credits"><strong>Written by Randy Basom</strong><br>Produced by Nik Boldrini<br>Released by Absatively Music</p>
-        <audio controls preload="metadata"><source src="assets/box-full-of-pictures.mp3" type="audio/mpeg"></audio>
-        <p class="small">Also available on Spotify, Apple Music, Amazon Music and other major streaming services.</p>
+<p class="genre">Story Song</p>
+
+<p class="credit"><strong>Written by:</strong> Randy Basom</p>
+
+<p class="credit"><strong>Produced by:</strong> Nik Boldrini</p>
+       
+       
+        <p class="description">
+If you've ever opened an old box of family photographs and found yourself smiling through forgotten memories, this heartfelt song was written for you.
+</p>
       </div>
     </article>
+<article class="feature-card">
+    <img src="assets/eyes-of-the-heart.png" alt="The Eyes of the Heart cover art">
 
-    <div class="tiles">
-      <article class="tile"><img src="assets/eyes-of-the-heart.png" alt="The Eyes of the Heart artwork"><div><p class="label">Selection</p><h3>The Eyes of the Heart</h3><p><strong>Written by Judy Manning</strong></p><p>A tender song about seeing beyond appearances and recognizing what matters most.</p><audio controls preload="metadata" style="width:100%;max-width:320px;">
-    <source src="assets/Eyes of the Heart.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio></div></article>
-      <article class="tile words"><span>♫</span><h3>Songs</h3><p>Original music shaped by memory, humor and heart.</p></article>
-      <article class="tile words"><span>⚡</span><h3>Instrumentals</h3><p>Melody-driven pieces created for listening, videos and imagination.</p></article>
+    <div>
+        <h3>The Eyes of the Heart</h3>
+
+        <p class="genre">Inspirational Ballad</p>
+
+        <p class="credit"><strong>Written by:</strong> Judy Manning</p>
+
+        <p class="credit"><strong>Produced by:</strong> Nik Boldrini</p>
+
+        <p class="description">
+            A gentle reminder that what matters most is often invisible to the eye. A song about seeing beyond appearances and recognizing the beauty within.
+        </p>
+    </div>
+</article>
     </div>
   </section>
+Curser ready
 
   <section class="section about" id="about">
     <img src="assets/nik-studio.png" alt="Nik Boldrini with guitar in his studio">
-    <div><p class="label">Behind the Music</p><h2>About Nik</h2>
+    <div>
+      <p class="label">Behind the Music</p>
+      <h2>About Nik</h2>
       <p class="lead">With eight decades of experience, Nik Boldrini continues doing what he enjoys most—creating original music.</p>
       <p>Through Absatively Music, he combines songwriting, musicianship, storytelling and what he calls <em>Posilutely Artful Intelligence</em> to produce songs and instrumentals that are thoughtful, entertaining and unmistakably his own.</p>
       <p>Absatively Music is home to the occasional idea that insists on becoming something—which he is unable to stop.</p>
@@ -68,10 +133,16 @@
   </section>
 
   <section class="section contact" id="contact">
-    <p class="label">Ask Us</p><h2>Questions? Comments? Ideas?</h2><p>We'd love to hear from you. Contact information will be added here shortly.</p>
+    <p class="label">Ask Us</p>
+    <h2>Questions? Comments? Ideas?</h2>
+    <p>We'd love to hear from you. Contact information will be added here shortly.</p>
   </section>
 </main>
-<footer><img src="assets/absatively-logo.png" alt=""><p>© 2026 Absatively Music. All Rights Reserved.</p></footer>
-<script src="script.js"></script>
+
+<footer>
+  <img src="assets/absatively-logo.png" alt="">
+  <p>© 2026 Absatively Music. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
